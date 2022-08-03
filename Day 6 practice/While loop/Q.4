@@ -1,0 +1,21 @@
+money=100
+bet_amount=1
+best_count=0
+won_count=0
+while ((money!=0 && money!=200))
+do
+echo -n "the bet is "
+bet=$(($RANDOM%2))
+if [ bet==1 ]
+then
+echo "Won"
+(( money+=bet_amount ))
+(( won_count++ ))
+else
+echo "Lost"
+(( money-=bet_amount ))
+fi
+(( bet_count++ ))
+done
+echo "the final money is $money"
+echo "no of bets made are $bet_count and not of time won are $won_count"
