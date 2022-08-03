@@ -1,0 +1,21 @@
+# a)
+feet=12
+echo 42 inch=?
+result=`echo $feet | awk '{print 42/$1}'`
+echo $result
+
+#b) 
+feet=40*60=2400
+y=?
+
+result=`echo $feet | awk '{print 2400*0.305}'`
+echo $result
+
+#c) 
+x=60
+y=40
+a=$(($x*$y))
+acres=`echo $a | awk '{print $a/43560}'`
+no_of_plots=25
+result=`echo $no_of_plots$acres | awk '{print $no_of_plots*$acres}'`
+echo $result
