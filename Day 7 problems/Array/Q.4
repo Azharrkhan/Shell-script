@@ -1,0 +1,8 @@
+declare -a Sum=("3" "2" "-5")
+read -a Sum
+tot=0
+for i in ${Sum[@]}
+do
+echo tot+=$i
+done
+echo "Total: $tot"
