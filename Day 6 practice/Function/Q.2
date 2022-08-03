@@ -1,0 +1,23 @@
+is_palindrome ()
+{
+number=$1
+copy_of_number=$number
+reverse_number=0
+while (( number>0 ))
+do
+remainder=$((number%10))
+reverse_number=$(( reverse_number*10+remainder ))
+(( number/=10 ))
+done
+if [ reverse_number == copy_of_number ]
+then
+echo "$copy_of_number is Palindrome"
+else
+echo "$copy_of_number is not Palindrome"
+fi
+}
+read -p "enter first number: " first_number
+is_palindrome $first_number
+
+read -p "enter second number : " second_number
+is_palindore $second_number
