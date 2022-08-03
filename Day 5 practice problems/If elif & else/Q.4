@@ -1,0 +1,43 @@
+read -p "enter a number : " a
+read -p "enter a number : " b
+read -p "enter a number : " c
+
+w=$(($a+$b*$c))
+echo result of first operation is "$w"
+
+x=$(($c+$a/$b))
+echo "result of second operation is $x"
+
+y=$(($a%$b+$c))
+echo "result of third operation is $y"
+
+z=$(($a*$b+$c))
+echo "result of fourth operation is $z"
+
+#maximum value
+if [ $w -gt $x -a $w -gt $y -a $w -gt $z ]
+then
+echo "maximum is $w"
+elif [ $x -gt $y -a $x -gt $z ]
+then
+echo "maximum is $x"
+elif [ $y -gt $z ]
+then
+echo "maximum is $y"
+else
+echo "maximum is $z"
+fi
+
+#for minimum
+if [ $w -lt $x -a $w -lt $y -a $w -lt $z ]
+then
+echo "minimum is $w"
+elif [ $x -lt $y -a $x -lt $z ]
+then
+echo "minimum is $x"
+elif [ $y -lt $z ]
+then
+echo "minimum is $y"
+else
+echo "minimum is $z"
+fi
