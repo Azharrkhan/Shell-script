@@ -1,0 +1,14 @@
+read -p "enter a number : " N
+echo "the prime factors are"
+for ((i=2; i*i<=N; i++))
+do
+if ((N%i==0))
+then
+echo -n "$p"
+((N/=i))
+else
+((i+=1))
+fi
+done
+echo $N
+
