@@ -1,0 +1,23 @@
+read -p "enter a number : " m
+read -p "enter a number : " n
+echo "the given range is from $m and $n"
+echo "the prime numbers are"
+while [$m -le $n]
+do
+i=2; flag=1
+while [ $i -le $m ]
+do
+if [ $m % $i -eq 0 ]
+then
+flag=0
+break
+else
+i=$i + 1
+fi
+done
+if [ $flag -eq 1 ]
+then
+echo $m
+fi
+m=$m+1
+done
