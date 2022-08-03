@@ -1,0 +1,32 @@
+read -p "enter a number : " a
+read -p "enter a number : " b
+read -p "enter a number : " c
+
+p=$(($a+($b*$c)))
+echo "result of first operation is $p"
+q=$((($a*$b)+$c))
+echo "result of second operation is $q"
+r=$(($c+($a/$b)))
+echo "result of third operation is $r"
+s=$((($a%$b)+$c))
+echo "result of fourth operation is $s"
+declare -A results=([R1]="$p" [R2]="$q" [R3]="$r" [R4]="$s")
+echo ${results[@]}
+#read in array
+echo "read in array"
+declare -a array=("$p" "$q" "$r" "$s")
+for i in {0..3}
+do
+#print
+echo ${array[i]}
+done
+echo "Descending order"
+for i in $(echo "70 110 14 10" | tr ' ' '\n' | sort -nr)
+do
+echo $i
+done
+echo "Ascending order"
+for i in $(echo "70 110 14 10" | tr ' ' '\n' | sort -r)
+do
+echo $i
+done
