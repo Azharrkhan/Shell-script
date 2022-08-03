@@ -1,0 +1,30 @@
+read -p "enter a number : " a
+read -p "enter a number : " b
+read -p "enter a number : " c
+read -p "enter a number : " d
+w=$(($a*12))
+echo "$w"
+x=$(($b/12))
+echo "$x"
+y=`echo $c | awk '{print $c/3.281}'`
+echo "$y"
+z=`echo $d | awk '{print $d*3.281}'`
+echo "$z"
+case $n in
+$n= $w -a $x -a $y -a $z
+1)
+echo "$w"
+;;
+2)
+echo "x"
+;;
+3)
+echo "y"
+;;
+4)
+echo "z"
+;;
+8)
+echo "na"
+;;
+esac
