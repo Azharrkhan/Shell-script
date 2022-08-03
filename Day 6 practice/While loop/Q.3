@@ -1,0 +1,17 @@
+head_count=0
+tail_count=0
+while ((head_count!=11 && tail_count!=11))
+do
+echo -n ".....flipping.....it's"
+flip=$((RANDOM%2))
+if [ $flip -eq 0 ]
+then
+echo "Heads"
+(( head_count++ ))
+else
+echo "Tails"
+(( tail_count++ ))
+fi
+echo "Head wins $head_count times and Tail wins $tail_count times"
+done
+echo "Game Over!"
